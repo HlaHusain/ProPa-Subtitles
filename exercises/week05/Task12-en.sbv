@@ -56,7 +56,8 @@ A single character is a palindrome
 according to our function.
 
 0:01:35.920,0:01:41.920
-But the second test fails because what we do is we
+But the second test fails
+because what we do is we
 
 0:01:43.120,0:01:50.160
 take a random character and a random
@@ -166,12 +167,12 @@ Let's use the functions 'head' and 'last'.
 If we check out ghci what they do.
 
 0:05:18.480,0:05:22.560
-We have head of some list
-- let's take the list [1..5],
+We have head of some list -
+let's take the list [1..5],
 
 0:05:24.240,0:05:34.480
-for example -
-head gives us 1 and tail gives us the rest.
+for example - head gives us
+1 and tail gives us the rest.
 
 0:05:36.000,0:05:38.240
 And we also have 'last'
@@ -193,8 +194,8 @@ So what we're doing is we're getting the head of
 the list and comparing it to the last element,
 
 0:06:13.680,0:06:20.240
-exactly what the palindrome is, if the first and
-the last are equal then it can be a palindrome.
+exactly what the palindrome is; if the first and
+the last are equal, then it can be a palindrome.
 
 0:06:21.840,0:06:33.040
 And then we say okay, if this is the
@@ -242,12 +243,12 @@ here and we're taking init and tail
 but we're never checking for the empty list.
 
 0:07:56.720,0:08:05.120
-Because head does not work on the empty list,
-tail does not work on the empty list init
+Because 'head' does not work on the empty list,
+'tail' does not work on the empty list; 'init' ...
 
 0:08:07.120,0:08:10.260
-some work some don't.
-(Actually, none of the used functions do!)
+some work, some don't. (Actually,
+none of the used functions do!)
 
 0:08:10.260,0:08:12.640
 If we take head [] gives an error,
@@ -282,15 +283,15 @@ Make this the
 otherwise case, and
 
 0:09:02.320,0:09:13.040
-check the length and we say the length has to be
-smaller than 2 then we know it's a palindrome.
+check the length, and we say the length has to be
+smaller than 2; then we know it's a palindrome.
 
 0:09:15.120,0:09:20.960
-Because if it's empty, i.e.,
-length xs == 0 it is a palindrome,
+Because if it's empty, i.e., length
+xs == 0, it is a palindrome;
 
 0:09:20.960,0:09:26.000
-and if it's just a single character
+and if it's just a single character,
 it is also a palindrome by default.
 
 0:09:27.920,0:09:30.160
@@ -301,12 +302,12 @@ Now we get the desired result.
 
 0:09:37.680,0:09:43.120
 We can again do this capitalization
-thing and now if we change
+thing, and now if we change
 
 0:09:45.600,0:09:54.400
 the function in these tests to
-refer to our alternative solution.
+refer to our alternative solution,
 
 0:09:55.600,0:10:03.840
-Load this up and run main it passes all the
-tests so this is a valid solution as well.
+load this up and run main. it passes all the
+tests. So this is a valid solution as well.

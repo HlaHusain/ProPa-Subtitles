@@ -1,5 +1,5 @@
 0:00:00.000,0:00:08.700
-Diese Aufgabe ist erneut eine CodeWorld Aufgabe.
+Diese Aufgabe ist erneut eine CodeWorld-Aufgabe.
 Erneut geht es um eine Erweiterung eines alten
 
 0:00:08.700,0:00:18.030
@@ -8,23 +8,23 @@ werden, vom letzten Mal. Es gibt auch wieder eine
 
 0:00:18.030,0:00:30.630
 Vorschau, die wir uns dazu anschauen können. So
-in etwa soll das ganze aussehen. Dafür füge ich
+in etwa soll das Ganze aussehen. Dafür füge ich
 
 0:00:32.760,0:00:45.360
-erst mal den Code des Baums vom letzten Mal ein.
-Die 'scene' Funktion ist hier bereits definiert,
+erstmal den Code des Baums vom letzten Mal ein.
+Die 'scene'-Funktion ist hier bereits definiert,
 
 0:00:45.360,0:00:51.210
-das heißt die brauchen wir nicht. Stattdessen
+das heißt, die brauchen wir nicht. Stattdessen
 definieren wir jetzt 'tree'. Ich füge das einfach
 
 0:00:51.210,0:01:04.200
-mal so ein und zeig das ganze an. Also das ist der
+mal so ein und zeige das Ganze an. Also das ist der
 Baum, der nicht animierte Baum, und zunächst ist es
 
 0:01:05.010,0:01:15.870
-günstig den Baum zu unterteilen und zwar anders
-als das hier getan ist mit 'wood' und 'leaves'
+günstig, den Baum zu unterteilen, und zwar anders
+als das hier getan ist mit 'wood' und 'leaves',
 
 0:01:15.870,0:01:24.900
 sondern in bewegliche und nicht bewegliche
@@ -32,7 +32,7 @@ Teile. Die nicht beweglichen Teile bestehen
 
 0:01:25.800,0:01:30.510
 im Prinzip nur aus dem 'trunk'. Jetzt haben wir
-hier diesen 'wood' Teil, der aus 'trunk' und
+hier diesen 'wood'-Teil, der aus 'trunk' und
 
 0:01:31.020,0:01:36.510
 'branches' besteht und dieses 'colored brown'. Um
@@ -56,7 +56,7 @@ allerdings ist der Code jetzt umstrukturiert.
 
 0:02:37.330,0:02:51.070
 Dann geht es weiter, also jetzt wollen wir den
-Baum bewegen und wenn wir uns das hier nochmal
+Baum bewegen, und wenn wir uns das hier nochmal
 
 0:02:51.070,0:02:57.310
 anschauen, dann sehen wir, dass eine Rotation
@@ -64,11 +64,11 @@ stattfinden soll. Jetzt könnte man natürlich
 
 0:02:57.310,0:03:04.930
 naiv sagen, wir rotieren dann einfach die Blätter
-erst mal und gucken was passiert, denn da haben
+erstmal und gucken, was passiert, denn da haben
 
 0:03:04.930,0:03:17.410
-wir ja sowieso schon eine Rotation drinnen. Dafür
-müssen wir den Parameter t, hier diesen Double
+wir ja sowieso schon eine Rotation drin. Dafür
+müssen wir den Parameter t, hier diesen Double-
 
 0:03:17.410,0:03:25.270
 Wert, auch in die beweglichen Teile weiterreichen.
@@ -76,42 +76,42 @@ Das heißt, dazu muss aus dem Wert 'movingParts'
 
 0:03:25.270,0:03:33.520
 eine Funktion werden, die entsprechend diesen
-Parameter entgegennimmt. Genau so müssen
+Parameter entgegennimmt. Genauso müssen
 
 0:03:33.520,0:03:45.190
-'branches' und' leaves' solche Funktionen werden.
+'branches' und 'leaves' solche Funktionen werden.
 Also 'branches' wird auch zu einer Funktion von
 
 0:03:45.190,0:03:57.610
-Double nach Picture und 'leaves' auch und sie
+Double nach Picture und 'leaves' auch, und sie
 erhalten beide jeweils diesen Parameter t. Naiv
 
 0:03:57.610,0:04:04.780
-gesehen habe ich gesagt, man könnte hier jetzt
-einfach den t Parameter mit in diese 'branches'
+gesehen, habe ich gesagt, man könnte hier jetzt
+einfach den t-Parameter mit in diese 'branches'
 
 0:04:04.780,0:04:12.910
-packen und wenn man das ausführt, dann stellt man
-fest irgendwas ist verkehrt, nämlich es rotieren
+packen. Und wenn man das ausführt, dann stellt man
+fest: irgendwas ist verkehrt, nämlich es rotieren
 
 0:04:12.910,0:04:19.690
 nur die Äste, also das funktioniert so nicht. Also
 gehen wir strukturiert daran. Ich zeige den Baum
 
 0:04:19.690,0:04:30.670
-nochmal an. Was müssen wir denn machen damit sich
-die Blätter und auch die Zweige so bewegen wie in
+nochmal an. Was müssen wir denn machen, damit sich
+die Blätter und auch die Zweige so bewegen, wie in
 
 0:04:30.670,0:04:41.470
-dem Bild gezeigt? Wir müssen rotieren, und
-zwar um diesen Punkt hier. Denn die Äste sollen
+dem Bild gezeigt? Wir müssen rotieren, und zwar
+um diesen Punkt hier. Denn die Äste sollen
 
 0:04:41.470,0:04:51.280
 weiterhin am Baum bleiben, aber es soll da um
 diesen Punkt rotiert werden. Das heißt, es wäre
 
 0:04:51.280,0:04:59.890
-günstig diesen Punkt auch zu identifizieren.
+günstig, diesen Punkt auch zu identifizieren.
 Dafür können wir die 'coordinatePlane' nehmen,
 
 0:04:59.890,0:05:12.790
@@ -147,12 +147,12 @@ die Rotation um diesen Punkt ausführen, indem
 ich das hier rotiere. Also nicht den verschobenen
 
 0:06:49.620,0:07:14.970
-Punkt, sondern hier diesen 'branches' Teil.
+Punkt, sondern hier diesen 'branches'-Teil.
 Rotated um t. Das ist jetzt an der richtigen
 
 0:07:14.970,0:07:22.110
 Stelle, wir rotieren im Moment noch etwas zu weit,
-aber das sieht erst mal gut aus. Tatsächlich wird
+aber das sieht erstmal gut aus. Tatsächlich wird
 
 0:07:22.110,0:07:26.730
 jetzt das t in 'branches' nicht mehr gebraucht.
@@ -167,8 +167,8 @@ und wir haben dieses Verhalten. Dasselbe wollen
 wir jetzt auch bei 'leaves' machen. Da gilt
 
 0:07:41.670,0:07:51.030
-natürlich auch Dasselbe, also ich kann jetzt hier
-mal 'rotated t' angeben für den 'leaves' Teil.
+natürlich auch dasselbe, also ich kann jetzt hier
+mal 'rotated t' angeben für den 'leaves'-Teil.
 
 0:07:59.120,0:08:06.080
 Und dann sehen wir, das ist nicht das, was
@@ -183,7 +183,7 @@ Die Verschiebung um (0,2) und dann das
 Rotieren. Also 'translated 0 2 (rotated
 
 0:08:24.500,0:08:32.570
-t leaves)' und hier den t Parameter benötigen
+t leaves)' und hier den t-Parameter benötigen
 wir wieder nicht in 'leaves'. Das heißt,
 
 0:08:32.570,0:08:44.390
@@ -199,16 +199,16 @@ wird. Dann funktioniert die Rotation so, wie
 wir uns das vorstellen. Kleine Änderung am
 
 0:09:07.100,0:09:13.700
-Code. Wir haben hier zwei Mal 'translated
-0 2' und 'rotated t'. Das heißt, wir können
+Code. Wir haben hier zweimal 'translated 0
+2' und 'rotated t'. Das heißt, wir können
 
 0:09:13.700,0:09:20.990
-das ganze auch zusammenfassen und können hier
+das Ganze auch zusammenfassen und können hier
 sagen, dass 'branches' und 'leaves', dass das
 
 0:09:20.990,0:09:44.900
-als Parameter sein soll. 'Rotated t (branches &
-leaves)'. Das erhält erst mal die Funktionalität,
+als Parameter sein soll. 'Rotated t (branches & leaves)'.
+Das erhält erstmal die Funktionalität,
 
 0:09:44.900,0:09:59.090
 aber ist besser lesbarer Code. Nun müssen wir
@@ -280,7 +280,7 @@ muss man beachten, dass man für dieses Beenden
 
 0:12:42.890,0:12:51.920
 auch einen günstigen Zeitpunkt nimmt, nämlich
-einen zu dem die Animation auch wirklich sanft
+einen, zu dem die Animation auch wirklich sanft
 
 0:12:51.920,0:12:58.580
 beendet wird. Wenn ich hier z.B. einfach < 2
@@ -307,7 +307,7 @@ Zeit endet. Somit haben wir die Aufgabe gelöst und
 das basierend auf dem alten Programm. Man kann das
 
 0:13:53.390,0:14:03.500
-ganze auch von Grund auf neu entwickeln. Dabei
+Ganze auch von Grund auf neu entwickeln. Dabei
 kann man vermeiden, dass die Rotation zweimal
 
 0:14:03.500,0:14:19.790
@@ -316,15 +316,15 @@ einmal den Gesamtteil der Krone und man könnte
 
 0:14:19.790,0:14:28.710
 es aber auch so machen, dass man die Rotation
-hier mit in den 'branch' Teil mit einbaut und
+hier mit in den 'branch'-Teil mit einbaut und
 
 0:14:28.710,0:14:36.360
 dann die 'leaves' nur noch rotiert. Das wäre dann
 auch eine mögliche Option, um nicht den 'branch'
 
 0:14:36.360,0:14:42.360
-Teil sozusagen zweimal zu rotieren. Das könnte
-man machen, wenn man das von Grund auf entwickelt.
+Teil sozusagen zweimal zu rotieren. Das könnte man
+machen, wenn man das von Grund auf entwickelt.
 
 0:14:42.360,0:14:48.810
 Aber darauf möchte ich nicht weiter eingehen,
