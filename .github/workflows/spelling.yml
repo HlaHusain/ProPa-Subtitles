@@ -44,7 +44,7 @@ jobs:
     outputs:
       followup: ${{ steps.spelling.outputs.followup }}
     runs-on: ubuntu-latest
-    if: "contains(github.event_name, 'pull_request') || github.event_name == 'push'"
+    if: ${{ contains(github.event_name, 'pull_request') || github.event_name == 'push' }}
     concurrency:
       group: spelling-${{ github.event.pull_request.number || github.ref }}
       # note: If you use only_check_changed_files, you do not want cancel-in-progress
@@ -52,11 +52,11 @@ jobs:
     steps:
       - name: check-spelling
         id: spelling
-        uses: check-spelling/check-spelling@prerelease
+        uses: check-spelling/check-spelling@v0.0.25
         with:
           suppress_push_for_open_pull_request: 1
           checkout: true
-          spell_check_this: check-spelling/spell-check-this@prerelease
+          spell_check_this: check-spelling/check-spelling@v0.0.25
           post_comment: 0
           experimental_apply_changes_via_bot: 1
           extra_dictionaries:
@@ -68,6 +68,8 @@ jobs:
             cspell:npm/dict/npm.txt
             cspell:python/src/common/extra.txt
             cspell:de_DE/src/German_de_DE.dic
+            cspell:node/dict/node.txt
+            cspell:companies/src/companies.txt
             cspell:de_DE/src/hunspell/index.dic
           ignore-pattern: '[^\p{Ll}\p{Lm}\p{Lt}\p{Lu}]'
           upper-pattern: '[\p{Lu}\p{Lt}\p{Lm}]'
@@ -86,10 +88,10 @@ jobs:
     if: (success() || failure()) && needs.spelling.outputs.followup
     steps:
       - name: comment
-        uses: check-spelling/check-spelling@prerelease
+        uses: check-spelling/check-spelling@v0.0.25
         with:
           checkout: true
-          spell_check_this: check-spelling/spell-check-this@prerelease
+          spell_check_this: check-spelling/check-spelling@v0.0.25
           task: ${{ needs.spelling.outputs.followup }}
           experimental_apply_changes_via_bot: 1
 
@@ -109,8 +111,9 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: apply spelling updates
-        uses: check-spelling/check-spelling@prerelease
+        uses: check-spelling/check-spelling@v0.0.25
         with:
+          config: .github/actions/spelling
           experimental_apply_changes_via_bot: 1
           checkout: true
           ssh_key: "${{ secrets.CHECK_SPELLING }}"

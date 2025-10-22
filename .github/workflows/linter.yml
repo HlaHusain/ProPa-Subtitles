@@ -27,10 +27,9 @@ jobs:
           fetch-depth: 0
 
       - name: Run Linter
-        uses: github/super-linter@v7
+        uses: super-linter/super-linter@v8.2.1
         env:
-          VALIDATE_MARKDOWN: false
+          VALIDATE_YAML: true
+          VALIDATE_JSCPD_ALL_CODEBASE: true
+          VALIDATE_GITHUB_ACTIONS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_JSON_PRETTIER: false
-          VALIDATE_YAML_PRETTIER: false
-          VALIDATE_MARKDOWN_PRETTIER: false
