@@ -64,6 +64,7 @@ jobs:
             cspell:software-terms/dict/softwareTerms.txt
             cspell:filetypes/filetypes.txt
             cspell:haskell/dict/haskell.txt
+            cspell:cpp/src/stdlib-c.txt
             cspell:html/dict/html.txt
             cspell:npm/dict/npm.txt
             cspell:python/src/common/extra.txt
