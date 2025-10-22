@@ -1813,7 +1813,7 @@ February, etc. here, instead of numbers, but
 
 00:33:58,480 --> 00:34:02,340
 usually, dates are stored
-as number number number.
+as number.
 
 00:34:02,340 --> 00:34:06,889
 So, let me do this here as well.
